@@ -35,7 +35,7 @@ CREATE TABLE recipe_items (
 	food_id INTEGER NOT NULL,
 	amount_g REAL NOT NULL,
 
-	FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE,
+	FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
 	FOREIGN KEY (food_id) REFERENCES foods(id) ON DELETE RESTRICT
 );
 
@@ -45,7 +45,7 @@ CREATE TABLE portion_sizes (
 	amount REAL NOT NULL,
 	unit TEXT NOT NULL CHECK (unit IN('g', 'ml', 'piece')),
 
-	PRIMARY KEY (food_id, serving)
+	PRIMARY KEY (food_id, serving),
 
 	FOREIGN KEY (food_id) REFERENCES foods(id)
 );
