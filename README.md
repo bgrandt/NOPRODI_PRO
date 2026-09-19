@@ -1,4 +1,4 @@
-# NOPRODI_PRO
+# noprodi
 
 An open-source project for storing nutritional data and calculating nutritional values for recipes. This project is intended for dietitians or anyone else interested in nutrition.
 
